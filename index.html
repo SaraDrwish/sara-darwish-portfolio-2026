@@ -3,119 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سارة درويش | بورتفوليو - مطورة ويب</title>
-    <meta name="description" content="بورتفوليو سارة درويش - مطورة ويب ومصممة مواقع - أعمالي ومشاريعي">
-    <meta name="keywords" content="سارة درويش, مطورة ويب, بورتفوليو, مشاريع, HTML, CSS, JavaScript">
+    <title>سارة درويش | مطورة ويب ومهندسة DevOps</title>
+    <meta name="description" content="بورتفوليو سارة درويش - مطورة ويب ومهندسة DevOps. أعرض مشاريعي في React, Vue.js, وأحدث تقنيات السحابة والأتمتة.">
+    <meta name="keywords" content="سارة درويش, Sara Darwish, بورتفوليو, مطورة ويب, DevOps, Docker, Cloud, AWS, Python, Linux, Ansible, React, Vue.js">
     <meta name="author" content="سارة درويش">
-    <meta name="robots" content="index, follow">
-    
-    <!-- نفس الخطوط والأيقونات الأصلية + خطوط حديثة احتياطية -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="سارة درويش | مطورة ويب ومهندسة DevOps">
+    <meta property="og:description" content="بورتفوليو سارة درويش - أعرض مشاريعي وخبراتي في تطوير الويب والبنية التحتية السحابية.">
+    <meta property="og:image" content="assets/img/profile.png">
+    <meta property="og:url" content="https://saradrwish.github.io/myportofolio2022march/">
+    <!-- External Styles & Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- ملف التنسيق الرئيسي -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- شاشة تحميل (ميزة جديدة محسنة) -->
-    <div id="preloader">
-        <div class="loader"></div>
+    <!-- Language & Dark Mode Controls -->
+    <div class="top-controls">
+        <button id="themeToggle" class="theme-btn" aria-label="تبديل الوضع المظلم">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="langToggle" class="lang-btn">🇬🇧 English</button>
     </div>
 
-    <!-- زر الوضع الليلي (إضافة جديدة) -->
-    <div class="theme-switch-wrapper">
-        <i class="fas fa-sun"></i>
-        <label class="theme-switch">
-            <input type="checkbox" id="checkbox">
-            <span class="slider round"></span>
-        </label>
-        <i class="fas fa-moon"></i>
-    </div>
+    <!-- Preloader -->
+    <div id="preloader"><div class="loader"></div></div>
 
-    <!-- بداية المحتوى كما في الأصل ولكن بتنسيق محدث -->
     <div class="container">
-        <!-- الهيدر والرابط -->
+        <!-- Header -->
         <header>
             <div class="logo">
-                <h2>سارة درويش</h2>
+                <h2>سارة <span>درويش</span></h2>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#about">من أنا</a></li>
-                    <li><a href="#skills">مهاراتي</a></li>
-                    <li><a href="#projects">أعمالي</a></li>
-                    <li><a href="#contact">تواصل</a></li>
+                    <li><a href="#home" data-key="nav_home">الرئيسية</a></li>
+                    <li><a href="#about" data-key="nav_about">من أنا</a></li>
+                    <li><a href="#skills" data-key="nav_skills">مهاراتي</a></li>
+                    <li><a href="#projects" data-key="nav_projects">أعمالي</a></li>
+                    <li><a href="#contact" data-key="nav_contact">تواصل</a></li>
                 </ul>
             </nav>
         </header>
 
-        <!-- قسم الترحيب (hero) -->
+        <!-- Hero Section -->
         <section id="home" class="hero">
-            <div class="hero-text">
-                <h1>أنا <span class="highlight">سارة درويش</span></h1>
-                <div class="typewriter">
-                    <span id="typed-text"></span>
+            <div class="hero-content">
+                <h1><span data-key="hero_greeting">أنا</span> <span class="highlight">سارة درويش</span></h1>
+                <div class="typewriter"><span id="typed-text"></span><span class="cursor">|</span></div>
+                <p data-key="hero_desc">مطورة ويب ومهندسة DevOps - أحول الأفكار إلى تطبيقات سحابية وتفاعلية عالية الأداء.</p>
+                <div class="btn-group">
+                    <a href="#projects" class="btn-primary" data-key="btn_work">استعرض أعمالي</a>
+                    <a href="assets/docs/cv.pdf" class="btn-outline" download data-key="btn_cv">السيرة الذاتية</a>
                 </div>
-                <p>مطورة ويب متخصصة في تصميم وتطوير واجهات المستخدم التفاعلية.</p>
-                <a href="#projects" class="btn-primary">استعرض أعمالي <i class="fas fa-arrow-down"></i></a>
             </div>
             <div class="hero-image">
-                <!-- نفس الصورة التي لديك في الموقع الأصلي (احتفظنا بالمسار) -->
-                <img src="assets/img/profile.png" alt="سارة درويش">
+                <img src="assets/img/profile.png" alt="سارة درويش - مطورة ويب">
             </div>
         </section>
 
-        <!-- من أنا -->
+        <!-- About Section -->
         <section id="about" class="about">
-            <h2 class="section-title">من أنا</h2>
-            <div class="about-content">
-                <p>أنا سارة درويش، مطورة ويب لدي شغف بتحويل الأفكار إلى تجارب رقمية جميلة. أعمل على تصميم وتطوير مواقع ويب متكاملة تستخدم أحدث التقنيات مع التركيز على تجربة المستخدم والأداء.</p>
+            <h2 class="section-title" data-key="about_title">من أنا</h2>
+            <div class="about-card">
+                <p data-key="about_text">أنا سارة درويش، مطورة ويب ومهندسة DevOps. أمتلك شغفًا كبيرًا ببناء تطبيقات ويب حديثة باستخدام React وVue.js، وأيضًا في أتمتة العمليات وإدارة البنية التحتية السحابية باستخدام Docker وAnsible وAWS. هدفي هو تقديم حلول متكاملة وفعّالة تساهم في نجاح المشاريع الرقمية.</p>
             </div>
         </section>
 
-        <!-- المهارات -->
+        <!-- Skills Section -->
         <section id="skills" class="skills">
-            <h2 class="section-title">مهاراتي</h2>
-            <div class="skills-grid">
-                <!-- نفس المهارات من موقعك الأصلي -->
-                <div class="skill-card"><i class="fab fa-html5"></i><h3>HTML5</h3><div class="progress"><div style="width: 95%"></div></div></div>
-                <div class="skill-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3><div class="progress"><div style="width: 90%"></div></div></div>
-                <div class="skill-card"><i class="fab fa-js"></i><h3>JavaScript</h3><div class="progress"><div style="width: 85%"></div></div></div>
-                <div class="skill-card"><i class="fab fa-react"></i><h3>React</h3><div class="progress"><div style="width: 80%"></div></div></div>
-                <div class="skill-card"><i class="fab fa-bootstrap"></i><h3>Bootstrap</h3><div class="progress"><div style="width: 88%"></div></div></div>
-                <div class="skill-card"><i class="fab fa-git-alt"></i><h3>Git</h3><div class="progress"><div style="width: 75%"></div></div></div>
+            <h2 class="section-title" data-key="skills_title">مهاراتي التقنية</h2>
+            <div class="skills-grid" id="skillsGrid"></div>
+            
+            <h3 class="subtitle" data-key="advanced_title">⚙️ مهارات متقدمة (DevOps & Cloud)</h3>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="advancedSkillsSlider"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-        </section>
 
-        <!-- المشاريع (نفس المشاريع بالضبط من موقعك الأصلي مع روابطها) -->
-        <section id="projects" class="projects">
-            <h2 class="section-title">أعمالي</h2>
-            <div class="projects-grid" id="projects-grid">
-                <!-- سيتم تعبئتها بواسطة JavaScript بنفس بيانات الموقع الأصلي -->
-            </div>
-        </section>
-
-        <!-- السيرة الذاتية ووسائل التواصل -->
-        <section id="contact" class="contact">
-            <h2 class="section-title">تواصل معي</h2>
-            <div class="contact-info">
-                <a href="assets/docs/cv.pdf" class="btn-cv" download><i class="fas fa-file-pdf"></i> تحميل السيرة الذاتية</a>
-                <div class="social-icons">
-                    <a href="https://github.com/saradrwish" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/saradrwish" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:sara@example.com"><i class="fas fa-envelope"></i></a>
+            <!-- Modal for skill details -->
+            <div id="skillModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3 id="modalSkillTitle"></h3>
+                    <p id="modalSkillDesc"></p>
+                    <div id="modalRelatedProject"></div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Projects Section with Filter & Search -->
+        <section id="projects" class="projects">
+            <h2 class="section-title" data-key="projects_title">أعمالي</h2>
+            <div class="filter-bar">
+                <div class="filter-buttons" id="filterButtons"></div>
+                <input type="text" id="searchInput" class="search-input" placeholder="🔍 بحث بالاسم أو التقنية..." data-key="search_placeholder">
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2 class="section-title" data-key="contact_title">تواصل معي</h2>
+            <div class="contact-card">
+                <p data-key="contact_desc">يسعدني التواصل معك للمشاريع أو فرص العمل</p>
+                <div class="social-links">
+                    <a href="https://github.com/SaraDrwish" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/sara-darwish" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:it.saradarwish@gmail.com" aria-label="البريد الإلكتروني"><i class="fas fa-envelope"></i></a>
+                </div>
+                <a href="assets/docs/cv.pdf" class="btn-cv" download><i class="fas fa-file-pdf"></i> <span data-key="btn_cv">السيرة الذاتية (PDF)</span></a>
             </div>
         </section>
 
         <footer>
-            <p>© 2026 سارة درويش - جميع الحقوق محفوظة</p>
+            <p>© 2026 سارة درويش - <span data-key="footer">جميع الحقوق محفوظة</span></p>
         </footer>
     </div>
 
-    <!-- زر العودة للأعلى (ميزة جديدة) -->
-    <div id="scrollTopBtn" class="scroll-top"><i class="fas fa-chevron-up"></i></div>
+    <!-- Scroll to Top Button -->
+    <div id="scrollTop" class="scroll-top"><i class="fas fa-chevron-up"></i></div>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

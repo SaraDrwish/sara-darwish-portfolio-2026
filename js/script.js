@@ -1,81 +1,192 @@
-// بيانات المشاريع كما هي بالضبط من موقعك الأصلي (تم استخراجها من الكود المصدري لـ saradrwish.github.io)
-const projectsData = [
+// ---------- Data ----------
+// Basic skills
+const basicSkills = [
+    { name: "HTML5", icon: "fab fa-html5", percent: 95 },
+    { name: "CSS3", icon: "fab fa-css3-alt", percent: 90 },
+    { name: "JavaScript", icon: "fab fa-js", percent: 88 },
+    { name: "React", icon: "fab fa-react", percent: 85 },
+    { name: "Vue.js", icon: "fab fa-vuejs", percent: 82 },
+    { name: "Git", icon: "fab fa-git-alt", percent: 85 },
+    { name: "Python", icon: "fab fa-python", percent: 80 },
+];
+
+// Advanced skills for slider
+const advancedSkills = [
     {
-        id: 1,
-        title: "كيان العقارية",
-        description: "موقع شركة عقارية متكامل بواجهات عصرية وتفاعلية",
-        tech: "HTML5, CSS3, JavaScript, Bootstrap",
-        imageIcon: "🏢",
-        demoLink: "#",   // ضعي رابط المشروع الحقيقي إن وجد
-        githubLink: "https://github.com/saradrwish/kayan-realestate"
+        name: "DevOps", icon: "fas fa-code-branch",
+        desc: "ثقافة وأتمتة تجمع بين التطوير والعمليات لتحسين التسليم والنشر.",
+        project: { title: "CI/CD Pipeline", repo: "https://github.com/SaraDrwish?tab=repositories", tech: "GitHub Actions, Docker" }
     },
     {
-        id: 2,
-        title: "لوحة تحكم إدارية",
-        description: "لوحة تحكم تفاعلية للبيانات والإحصائيات",
-        tech: "React, Chart.js, SCSS",
-        imageIcon: "📊",
-        demoLink: "#",
-        githubLink: "https://github.com/saradrwish/admin-dashboard"
+        name: "Cloud", icon: "fas fa-cloud",
+        desc: "الحوسبة السحابية: AWS, Azure, نشر وإدارة الموارد.",
+        project: { title: "Cloud Infrastructure", repo: "https://github.com/SaraDrwish?tab=repositories", tech: "AWS EC2, S3, IAM" }
     },
     {
-        id: 3,
-        title: "متجري الإلكتروني",
-        description: "منصة تسوق إلكتروني مع سلة مشتريات",
-        tech: "Vue.js, Vuex, Axios",
-        imageIcon: "🛒",
-        demoLink: "#",
-        githubLink: "https://github.com/saradrwish/ecommerce-shop"
+        name: "AWS", icon: "fab fa-aws",
+        desc: "خدمات أمازون السحابية: EC2, Lambda, RDS, S3, IAM.",
+        project: { title: "Serverless API", repo: "https://github.com/SaraDrwish", tech: "AWS Lambda, API Gateway" }
     },
     {
-        id: 4,
-        title: "تطبيق الطقس",
-        description: "تطبيق عرض حالة الطقس باستخدام API",
-        tech: "JavaScript, Fetch API, CSS Grid",
-        imageIcon: "⛅",
-        demoLink: "#",
-        githubLink: "https://github.com/saradrwish/weather-app"
+        name: "Linux", icon: "fab fa-linux",
+        desc: "إدارة أنظمة Linux، أوامر bash، أتمتة المهام، وتهيئة الخوادم.",
+        project: { title: "Linux Scripts", repo: "https://github.com/SaraDrwish?tab=repositories", tech: "Bash, Cron" }
     },
     {
-        id: 5,
-        title: "مدونة تقنية",
-        description: "منصة مقالات مع نظام تعليقات بسيط",
-        tech: "Node.js, Express, MongoDB",
-        imageIcon: "📝",
-        demoLink: "#",
-        githubLink: "https://github.com/saradrwish/tech-blog"
+        name: "Ansible", icon: "fas fa-cogs",
+        desc: "أتمتة التهيئة وإدارة التكوين باستخدام Ansible playbooks.",
+        project: { title: "Ansible Deployment", repo: "https://github.com/SaraDrwish?tab=repositories", tech: "Ansible, YAML" }
+    },
+    {
+        name: "Docker", icon: "fab fa-docker",
+        desc: "حاويات Docker، إنشاء Dockerfiles، Docker Compose، ورفع الصور إلى Registry.",
+        project: { title: "Dockerized Node.js App", repo: "https://github.com/SaraDrwish", tech: "Docker, Node.js" }
+    },
+    {
+        name: "Python", icon: "fab fa-python",
+        desc: "برمجة بايثون لتطوير الويب (Django/Flask)، سكريبتات الأتمتة وتحليل البيانات.",
+        project: { title: "Python Automation Tools", repo: "https://github.com/SaraDrwish", tech: "Python, Flask" }
     }
 ];
 
-// عرض المشاريع في الصفحة
-function renderProjects() {
-    const container = document.getElementById('projects-grid');
+// Main projects (fully extracted from the original portfolio)
+const projectsData = [
+    { id: 1, title: "كيان العقارية", desc: "موقع شركة عقارية متكامل بواجهات حديثة ونظام بحث متقدم.", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"], icon: "🏢", github: "https://github.com/SaraDrwish", demo: "#" },
+    { id: 2, title: "لوحة تحكم إدارية", desc: "لوحة تحكم تفاعلية تعرض إحصائيات ورسوم بيانية live باستخدام APIs.", tech: ["React", "Chart.js", "SCSS", "Axios"], icon: "📊", github: "https://github.com/SaraDrwish", demo: "#" },
+    { id: 3, title: "متجري الإلكتروني", desc: "منصة تسوق إلكتروني متكاملة مع سلة مشتريات ونظام دفع وهمي.", tech: ["Vue.js", "Vuex", "Vue Router", "Tailwind"], icon: "🛒", github: "https://github.com/SaraDrwish", demo: "#" },
+    { id: 4, title: "تطبيق الطقس", desc: "تطبيق عرض حالة الطقس باستخدام OpenWeatherMap API مع واجهة جذابة.", tech: ["JavaScript", "Fetch API", "CSS Grid", "LocalStorage"], icon: "⛅", github: "https://github.com/SaraDrwish", demo: "#" },
+    { id: 5, title: "مدونة تقنية", desc: "منصة مقالات مع نظام تعليقات ومستخدمين بسيط (Full-stack).", tech: ["Node.js", "Express", "MongoDB", "EJS"], icon: "📝", github: "https://github.com/SaraDrwish", demo: "#" },
+    { id: 6, title: "قالب Ghost", desc: "تصميم قالب احترافي لموقع Ghost CMS.", tech: ["CSS3", "HTML5", "Responsive"], icon: "👻", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/template3ghost/" },
+    { id: 7, title: "قالب Leon", desc: "قالب إبداعي يعتمد على التصميم الحديث والنظيف.", tech: ["CSS3", "HTML5", "JS"], icon: "🦁", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/leonjs5/" },
+    { id: 8, title: "Project One", desc: "مشروع تصميم ويب متكامل بواجهة أنيقة.", tech: ["CSS3", "HTML5"], icon: "📁", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/ProjectOne23/" },
+    { id: 9, title: "Project Two", desc: "تصميم موقع احترافي آخر يعكس مهارات التصميم.", tech: ["CSS3", "HTML5"], icon: "📂", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/Project2/" },
+    { id: 10, title: "Bootstrap Project 3", desc: "تصميم موقع باستخدام إطار العمل Bootstrap.", tech: ["Bootstrap", "CSS3", "HTML5"], icon: "🔷", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/project3_bootstrap/" },
+    { id: 11, title: "Todo List", desc: "تطبيق لإدارة المهام اليومية بقائمة مهام تفاعلية.", tech: ["JavaScript", "CSS3", "HTML5", "LocalStorage"], icon: "✅", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/todo2023/" },
+    { id: 12, title: "JS Task Counter", desc: "تطبيق بسيط لعد المهام وعرض الإحصائيات.", tech: ["JavaScript", "CSS3", "HTML5"], icon: "🔢", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/js_task1/" },
+    { id: 13, title: "Shopping App", desc: "تطبيق تسوق بسيط مع سلة مشتريات.", tech: ["JavaScript", "CSS3", "HTML5"], icon: "🛍️", github: "https://github.com/SaraDrwish/app1-shopping", demo: "#" },
+    { id: 14, title: "Orang Page", desc: "صفحة تصميم فريدة وجذابة.", tech: ["CSS3", "HTML5"], icon: "🍊", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/pro1cha2/" },
+    { id: 15, title: "React Project 1", desc: "تطبيق React مع Bootstrap لتصميم واجهات حديثة.", tech: ["React", "Bootstrap", "CSS3", "HTML5"], icon: "⚛️", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/reaaaacttttt23/" },
+    { id: 16, title: "React Project 3 (Portfolio)", desc: "بورتفوليو شخصي مبني على React مع مكتبة Framer Motion.", tech: ["React", "Framer Motion", "CSS3"], icon: "✨", github: "https://github.com/SaraDrwish/react3Porto", demo: "#" },
+    { id: 17, title: "Vue.js Landing Page", desc: "صفحة هبوط باستخدام Vue.js و Tailwind CSS.", tech: ["Vue.js", "Tailwind", "Figma"], icon: "🖌️", github: "https://github.com/SaraDrwish/sara-s-task1-1-vueJs", demo: "#" },
+    { id: 18, title: "MyDream Place (Vue.js)", desc: "تطبيق Vue.js متكامل مع Pinia لإدارة الحالة.", tech: ["Vue.js", "Pinia", "Tailwind"], icon: "🌟", github: "https://github.com/SaraDrwish/algoriza-internship-FE204", demo: "#" }
+];
+
+// ---------- Helper Functions ----------
+function renderBasicSkills() {
+    const container = document.getElementById('skillsGrid');
     if (!container) return;
-    container.innerHTML = projectsData.map(project => `
+    container.innerHTML = basicSkills.map(s => `
+        <div class="skill-card">
+            <i class="${s.icon}"></i>
+            <h3>${s.name}</h3>
+            <div class="progress-bar"><div class="progress-fill" style="width:${s.percent}%"></div></div>
+            <small>${s.percent}%</small>
+        </div>
+    `).join('');
+}
+
+function renderAdvancedSlider() {
+    const wrapper = document.getElementById('advancedSkillsSlider');
+    if (!wrapper) return;
+    wrapper.innerHTML = advancedSkills.map(s => `
+        <div class="swiper-slide" data-skill='${JSON.stringify(s)}'>
+            <i class="${s.icon}"></i>
+            <h3>${s.name}</h3>
+        </div>
+    `).join('');
+
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+        slide.addEventListener('click', () => {
+            const skillData = JSON.parse(slide.getAttribute('data-skill'));
+            openModal(skillData);
+        });
+    });
+}
+
+function openModal(skill) {
+    const modal = document.getElementById('skillModal');
+    const title = document.getElementById('modalSkillTitle');
+    const desc = document.getElementById('modalSkillDesc');
+    const projectDiv = document.getElementById('modalRelatedProject');
+    title.innerText = skill.name;
+    desc.innerText = skill.desc;
+    projectDiv.innerHTML = `
+        <h4>📁 مشروع مرتبط:</h4>
+        <p><strong>${skill.project.title}</strong> - ${skill.project.tech}</p>
+        <a href="${skill.project.repo}" target="_blank"><i class="fab fa-github"></i> رابط GitHub</a>
+    `;
+    modal.style.display = 'flex';
+}
+
+let allProjects = [...projectsData]; // Copy original
+let currentFilter = 'all';
+let currentSearch = '';
+
+function renderProjects() {
+    const container = document.getElementById('projectsGrid');
+    if (!container) return;
+    
+    let filtered = allProjects.filter(project => {
+        // Filter logic
+        if (currentFilter !== 'all' && !project.tech.includes(currentFilter)) return false;
+        // Search logic
+        if (currentSearch) {
+            const searchLower = currentSearch.toLowerCase();
+            const titleMatch = project.title.toLowerCase().includes(searchLower);
+            const techMatch = project.tech.some(t => t.toLowerCase().includes(searchLower));
+            if (!titleMatch && !techMatch) return false;
+        }
+        return true;
+    });
+
+    if (filtered.length === 0) {
+        container.innerHTML = `<div class="no-results">🤔 لا توجد مشاريع تطابق البحث. حاول بكلمات أخرى.</div>`;
+        return;
+    }
+
+    container.innerHTML = filtered.map(p => `
         <div class="project-card">
-            <div class="project-img">${project.imageIcon}</div>
+            <div class="project-img">${p.icon}</div>
             <div class="project-info">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-                <div class="tech-stack">${project.tech}</div>
+                <h3>${p.title}</h3>
+                <p>${p.desc}</p>
+                <div class="project-tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div>
                 <div class="project-links">
-                    <a href="${project.githubLink}" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    ${project.demoLink !== '#' ? `<a href="${project.demoLink}" target="_blank"><i class="fas fa-external-link-alt"></i> معاينة</a>` : ''}
+                    <a href="${p.github}" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    ${p.demo !== '#' ? `<a href="${p.demo}" target="_blank"><i class="fas fa-external-link-alt"></i> معاينة</a>` : ''}
                 </div>
             </div>
         </div>
     `).join('');
 }
 
-// تأثير الكتابة (محدث ليتناسب مع النصوص الأصلية)
-const roles = ["مطورة ويب", "مصممة واجهات", "خبيرة في تجربة المستخدم", "مطورة React"];
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+function updateFilterButtons() {
+    const categories = ['all', 'HTML5', 'CSS3', 'JavaScript', 'React', 'Vue.js', 'Node.js', 'Bootstrap', 'Tailwind', 'Python'];
+    const btnsContainer = document.getElementById('filterButtons');
+    if (!btnsContainer) return;
+    
+    btnsContainer.innerHTML = categories.map(cat => `
+        <button class="filter-btn ${currentFilter === cat ? 'active' : ''}" data-filter="${cat}">${cat === 'all' ? (currentLang === 'ar' ? 'الكل' : 'All') : cat}</button>
+    `).join('');
+    
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            currentFilter = btn.getAttribute('data-filter');
+            updateFilterButtons();
+            renderProjects();
+        });
+    });
+}
+
+// Typewriter effect
+const roles = { ar: ["مطورة ويب", "مهندسة DevOps", "خبيرة سحابية", "بانية تجارب رقمية"], en: ["Web Developer", "DevOps Engineer", "Cloud Expert", "Digital Experience Builder"] };
+let currentLang = "ar";
+let roleIndex = 0, charIndex = 0, isDeleting = false;
+
 function typeEffect() {
-    const currentRole = roles[roleIndex];
     const typedSpan = document.getElementById('typed-text');
     if (!typedSpan) return;
+    const currentRole = roles[currentLang][roleIndex];
     if (isDeleting) {
         typedSpan.innerText = currentRole.substring(0, charIndex - 1);
         charIndex--;
@@ -90,80 +201,120 @@ function typeEffect() {
     }
     if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
+        roleIndex = (roleIndex + 1) % roles[currentLang].length;
         setTimeout(typeEffect, 300);
         return;
     }
-    const speed = isDeleting ? 60 : 120;
-    setTimeout(typeEffect, speed);
+    setTimeout(typeEffect, isDeleting ? 60 : 100);
 }
 
-// Dark mode toggle
-function initDarkMode() {
-    const checkbox = document.getElementById('checkbox');
-    if (!checkbox) return;
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-    if (currentTheme) {
-        document.body.classList.add(currentTheme);
-        if (currentTheme === 'dark') checkbox.checked = true;
+// Translations
+const translations = {
+    ar: {
+        nav_home: "الرئيسية", nav_about: "من أنا", nav_skills: "مهاراتي", nav_projects: "أعمالي", nav_contact: "تواصل",
+        hero_greeting: "أنا", btn_work: "استعرض أعمالي", btn_cv: "السيرة الذاتية", about_title: "من أنا",
+        about_text: "أنا سارة درويش، مطورة ويب ومهندسة DevOps. أمتلك شغفًا كبيرًا ببناء تطبيقات ويب حديثة باستخدام React وVue.js، وأيضًا في أتمتة العمليات وإدارة البنية التحتية السحابية باستخدام Docker وAnsible وAWS. هدفي هو تقديم حلول متكاملة وفعّالة تساهم في نجاح المشاريع الرقمية.",
+        skills_title: "مهاراتي التقنية", advanced_title: "⚙️ مهارات متقدمة (DevOps & Cloud)",
+        projects_title: "أعمالي", search_placeholder: "🔍 بحث بالاسم أو التقنية...",
+        contact_title: "تواصل معي", contact_desc: "يسعدني التواصل معك للمشاريع أو فرص العمل",
+        footer: "جميع الحقوق محفوظة"
+    },
+    en: {
+        nav_home: "Home", nav_about: "About", nav_skills: "Skills", nav_projects: "Projects", nav_contact: "Contact",
+        hero_greeting: "I'm", btn_work: "View my work", btn_cv: "Resume", about_title: "About Me",
+        about_text: "I'm Sara Darwish, a web developer and DevOps engineer. I have a great passion for building modern web applications using React and Vue.js, as well as automating processes and managing cloud infrastructure using Docker, Ansible, and AWS. My goal is to provide integrated and efficient solutions that contribute to the success of digital projects.",
+        skills_title: "Technical Skills", advanced_title: "⚙️ Advanced Skills (DevOps & Cloud)",
+        projects_title: "Projects", search_placeholder: "🔍 Search by name or tech...",
+        contact_title: "Contact Me", contact_desc: "I'd love to connect for projects or job opportunities",
+        footer: "All rights reserved"
     }
-    checkbox.addEventListener('change', function() {
-        if (this.checked) {
-            document.body.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-        }
+};
+
+function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === "ar" ? "ar" : "en";
+    document.body.dir = lang === "ar" ? "rtl" : "ltr";
+    const t = translations[lang];
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (t[key]) el.innerText = t[key];
+    });
+    document.getElementById("langToggle").innerHTML = lang === "ar" ? "🇬🇧 English" : "🇸🇦 العربية";
+    // Restart typewriter with new language
+    roleIndex = 0; charIndex = 0; isDeleting = false;
+    typeEffect();
+    // Update filter button texts if needed
+    updateFilterButtons();
+}
+
+// ---------- Initialization ----------
+function initDarkMode() {
+    const toggle = document.getElementById('themeToggle');
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
     });
 }
 
-// Scroll to top
 function initScrollTop() {
-    const scrollBtn = document.getElementById('scrollTopBtn');
-    if (!scrollBtn) return;
+    const btn = document.getElementById('scrollTop');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) scrollBtn.classList.add('show');
-        else scrollBtn.classList.remove('show');
+        if (window.scrollY > 400) btn.classList.add('show');
+        else btn.classList.remove('show');
     });
-    scrollBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-// Preloader hide
-function hidePreloader() {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        setTimeout(() => {
+window.addEventListener('DOMContentLoaded', () => {
+    // Hide preloader
+    setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
             preloader.style.opacity = '0';
             preloader.style.visibility = 'hidden';
-        }, 800);
-    }
-}
-
-// تنفيذ كل شيء عند تحميل الصفحة
-window.addEventListener('DOMContentLoaded', () => {
+        }
+    }, 500);
+    
+    renderBasicSkills();
+    renderAdvancedSlider();
     renderProjects();
+    updateFilterButtons();
     typeEffect();
     initDarkMode();
     initScrollTop();
-    hidePreloader();
-});
-
-// إعادة تطبيق تأثير ظهور البطاقات عند التمرير (اختياري)
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+    
+    // Initialize Swiper
+    new Swiper('.mySwiper', {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        breakpoints: { 640: { slidesPerView: 3 }, 1024: { slidesPerView: 4 } }
     });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.project-card, .skill-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.5s ease';
-    observer.observe(el);
+    
+    // Modal close
+    const modal = document.getElementById('skillModal');
+    const closeBtn = document.querySelector('.close-modal');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => modal.style.display = 'none');
+        window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+    }
+    
+    // Search input
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            currentSearch = e.target.value;
+            renderProjects();
+        });
+    }
+    
+    // Set default language
+    setLanguage('ar');
+    
+    // Language toggle event
+    document.getElementById('langToggle').addEventListener('click', () => {
+        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+    });
 });
