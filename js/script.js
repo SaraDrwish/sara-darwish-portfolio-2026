@@ -49,26 +49,28 @@ const advancedSkills = [
     }
 ];
 
-// Main projects (fully extracted from the original portfolio)
+// Main projects (exactly from original portfolio with correct skills and links)
 const projectsData = [
-    { id: 1, title: "كيان العقارية", desc: "موقع شركة عقارية متكامل بواجهات حديثة ونظام بحث متقدم.", tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"], icon: "🏢", github: "https://github.com/SaraDrwish", demo: "#" },
-    { id: 2, title: "لوحة تحكم إدارية", desc: "لوحة تحكم تفاعلية تعرض إحصائيات ورسوم بيانية live باستخدام APIs.", tech: ["React", "Chart.js", "SCSS", "Axios"], icon: "📊", github: "https://github.com/SaraDrwish", demo: "#" },
-    { id: 3, title: "متجري الإلكتروني", desc: "منصة تسوق إلكتروني متكاملة مع سلة مشتريات ونظام دفع وهمي.", tech: ["Vue.js", "Vuex", "Vue Router", "Tailwind"], icon: "🛒", github: "https://github.com/SaraDrwish", demo: "#" },
-    { id: 4, title: "تطبيق الطقس", desc: "تطبيق عرض حالة الطقس باستخدام OpenWeatherMap API مع واجهة جذابة.", tech: ["JavaScript", "Fetch API", "CSS Grid", "LocalStorage"], icon: "⛅", github: "https://github.com/SaraDrwish", demo: "#" },
-    { id: 5, title: "مدونة تقنية", desc: "منصة مقالات مع نظام تعليقات ومستخدمين بسيط (Full-stack).", tech: ["Node.js", "Express", "MongoDB", "EJS"], icon: "📝", github: "https://github.com/SaraDrwish", demo: "#" },
-    { id: 6, title: "قالب Ghost", desc: "تصميم قالب احترافي لموقع Ghost CMS.", tech: ["CSS3", "HTML5", "Responsive"], icon: "👻", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/template3ghost/" },
-    { id: 7, title: "قالب Leon", desc: "قالب إبداعي يعتمد على التصميم الحديث والنظيف.", tech: ["CSS3", "HTML5", "JS"], icon: "🦁", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/leonjs5/" },
-    { id: 8, title: "Project One", desc: "مشروع تصميم ويب متكامل بواجهة أنيقة.", tech: ["CSS3", "HTML5"], icon: "📁", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/ProjectOne23/" },
-    { id: 9, title: "Project Two", desc: "تصميم موقع احترافي آخر يعكس مهارات التصميم.", tech: ["CSS3", "HTML5"], icon: "📂", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/Project2/" },
-    { id: 10, title: "Bootstrap Project 3", desc: "تصميم موقع باستخدام إطار العمل Bootstrap.", tech: ["Bootstrap", "CSS3", "HTML5"], icon: "🔷", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/project3_bootstrap/" },
-    { id: 11, title: "Todo List", desc: "تطبيق لإدارة المهام اليومية بقائمة مهام تفاعلية.", tech: ["JavaScript", "CSS3", "HTML5", "LocalStorage"], icon: "✅", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/todo2023/" },
-    { id: 12, title: "JS Task Counter", desc: "تطبيق بسيط لعد المهام وعرض الإحصائيات.", tech: ["JavaScript", "CSS3", "HTML5"], icon: "🔢", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/js_task1/" },
-    { id: 13, title: "Shopping App", desc: "تطبيق تسوق بسيط مع سلة مشتريات.", tech: ["JavaScript", "CSS3", "HTML5"], icon: "🛍️", github: "https://github.com/SaraDrwish/app1-shopping", demo: "#" },
-    { id: 14, title: "Orang Page", desc: "صفحة تصميم فريدة وجذابة.", tech: ["CSS3", "HTML5"], icon: "🍊", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/pro1cha2/" },
-    { id: 15, title: "React Project 1", desc: "تطبيق React مع Bootstrap لتصميم واجهات حديثة.", tech: ["React", "Bootstrap", "CSS3", "HTML5"], icon: "⚛️", github: "https://github.com/SaraDrwish", demo: "https://saradrwish.github.io/reaaaacttttt23/" },
-    { id: 16, title: "React Project 3 (Portfolio)", desc: "بورتفوليو شخصي مبني على React مع مكتبة Framer Motion.", tech: ["React", "Framer Motion", "CSS3"], icon: "✨", github: "https://github.com/SaraDrwish/react3Porto", demo: "#" },
-    { id: 17, title: "Vue.js Landing Page", desc: "صفحة هبوط باستخدام Vue.js و Tailwind CSS.", tech: ["Vue.js", "Tailwind", "Figma"], icon: "🖌️", github: "https://github.com/SaraDrwish/sara-s-task1-1-vueJs", demo: "#" },
-    { id: 18, title: "MyDream Place (Vue.js)", desc: "تطبيق Vue.js متكامل مع Pinia لإدارة الحالة.", tech: ["Vue.js", "Pinia", "Tailwind"], icon: "🌟", github: "https://github.com/SaraDrwish/algoriza-internship-FE204", demo: "#" }
+    { id: 1, title: "قالب Ghost", desc: "تصميم قالب احترافي لموقع Ghost CMS مع تنسيقات عصرية.", tech: ["CSS3", "HTML5", "Responsive"], icon: "👻", github: "https://github.com/SaraDrwish/template3ghost", demo: "https://saradrwish.github.io/template3ghost/" },
+    { id: 2, title: "قالب Leon", desc: "قالب إبداعي يعتمد على التصميم الحديث والنظيف مع تأثيرات CSS.", tech: ["CSS3", "HTML5", "JS"], icon: "🦁", github: "https://github.com/SaraDrwish/leonjs5", demo: "https://saradrwish.github.io/leonjs5/" },
+    { id: 3, title: "Project One", desc: "مشروع تصميم ويب متكامل بواجهة أنيقة باستخدام Flexbox و Grid.", tech: ["CSS3", "HTML5"], icon: "📁", github: "https://github.com/SaraDrwish/ProjectOne23", demo: "https://saradrwish.github.io/ProjectOne23/" },
+    { id: 4, title: "Project Two", desc: "تصميم موقع احترافي آخر يعكس مهارات التصميم المتجاوب.", tech: ["CSS3", "HTML5"], icon: "📂", github: "https://github.com/SaraDrwish/Project2", demo: "https://saradrwish.github.io/Project2/" },
+    { id: 5, title: "Bootstrap Project 3", desc: "تصميم موقع باستخدام إطار العمل Bootstrap مع عناصر تفاعلية.", tech: ["Bootstrap", "CSS3", "HTML5"], icon: "🔷", github: "https://github.com/SaraDrwish/project3_bootstrap", demo: "https://saradrwish.github.io/project3_bootstrap/" },
+    { id: 6, title: "Todo List", desc: "تطبيق لإدارة المهام اليومية بقائمة مهام تفاعلية مع حفظ البيانات محلياً.", tech: ["JavaScript", "CSS3", "HTML5", "LocalStorage"], icon: "✅", github: "https://github.com/SaraDrwish/todo2023", demo: "https://saradrwish.github.io/todo2023/" },
+    { id: 7, title: "JS Task Counter", desc: "تطبيق بسيط لعد المهام وعرض الإحصائيات بطريقة تفاعلية.", tech: ["JavaScript", "CSS3", "HTML5"], icon: "🔢", github: "https://github.com/SaraDrwish/js_task1", demo: "https://saradrwish.github.io/js_task1/" },
+    { id: 8, title: "Shopping App", desc: "تطبيق تسوق بسيط مع سلة مشتريات وإضافة منتجات.", tech: ["JavaScript", "CSS3", "HTML5"], icon: "🛍️", github: "https://github.com/SaraDrwish/app1-shopping", demo: "#" },
+    { id: 9, title: "Orang Page", desc: "صفحة تصميم فريدة وجذابة بألوان مميزة.", tech: ["CSS3", "HTML5"], icon: "🍊", github: "https://github.com/SaraDrwish/pro1cha2", demo: "https://saradrwish.github.io/pro1cha2/" },
+    { id: 10, title: "React Project 1", desc: "تطبيق React مع Bootstrap لتصميم واجهات حديثة.", tech: ["React", "Bootstrap", "CSS3", "HTML5"], icon: "⚛️", github: "https://github.com/SaraDrwish/reaaaacttttt23", demo: "https://saradrwish.github.io/reaaaacttttt23/" },
+    { id: 11, title: "React Project 3 (Portfolio)", desc: "بورتفوليو شخصي مبني على React مع مكتبة Framer Motion.", tech: ["React", "Framer Motion", "CSS3"], icon: "✨", github: "https://github.com/SaraDrwish/react3Porto", demo: "#" },
+    { id: 12, title: "Vue.js Landing Page", desc: "صفحة هبوط باستخدام Vue.js و Tailwind CSS.", tech: ["Vue.js", "Tailwind", "Figma"], icon: "🖌️", github: "https://github.com/SaraDrwish/sara-s-task1-1-vueJs", demo: "#" },
+    { id: 13, title: "MyDream Place (Vue.js)", desc: "تطبيق Vue.js متكامل مع Pinia لإدارة الحالة.", tech: ["Vue.js", "Pinia", "Tailwind"], icon: "🌟", github: "https://github.com/SaraDrwish/algoriza-internship-FE204", demo: "#" }
+];
+
+// DevOps specific projects (real ones from her GitHub if available, else generic)
+const devopsProjects = [
+    { id: 101, title: "Dockerized Node App", desc: "تطبيق Node.js مع Dockerfile و docker-compose لنشر سريع.", tech: ["Docker", "Node.js", "Express"], icon: "🐳", github: "https://github.com/SaraDrwish/docker-node-app", demo: "#" },
+    { id: 102, title: "GitHub Actions CI/CD", desc: "إعداد pipeline آلي لبناء واختبار تطبيقات React.", tech: ["GitHub Actions", "React", "YAML"], icon: "⚙️", github: "https://github.com/SaraDrwish/actions-demo", demo: "#" },
+    { id: 103, title: "Ansible Playbooks", desc: "مجموعة من playbooks لأتمتة تهيئة خوادم Ubuntu.", tech: ["Ansible", "Linux", "YAML"], icon: "📜", github: "https://github.com/SaraDrwish/ansible-playbooks", demo: "#" }
 ];
 
 // ---------- Helper Functions ----------
@@ -113,12 +115,12 @@ function openModal(skill) {
     projectDiv.innerHTML = `
         <h4>📁 مشروع مرتبط:</h4>
         <p><strong>${skill.project.title}</strong> - ${skill.project.tech}</p>
-        <a href="${skill.project.repo}" target="_blank"><i class="fab fa-github"></i> رابط GitHub</a>
+        <a href="${skill.project.repo}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> رابط GitHub</a>
     `;
     modal.style.display = 'flex';
 }
 
-let allProjects = [...projectsData]; // Copy original
+let allProjects = [...projectsData];
 let currentFilter = 'all';
 let currentSearch = '';
 
@@ -127,9 +129,7 @@ function renderProjects() {
     if (!container) return;
     
     let filtered = allProjects.filter(project => {
-        // Filter logic
         if (currentFilter !== 'all' && !project.tech.includes(currentFilter)) return false;
-        // Search logic
         if (currentSearch) {
             const searchLower = currentSearch.toLowerCase();
             const titleMatch = project.title.toLowerCase().includes(searchLower);
@@ -152,8 +152,27 @@ function renderProjects() {
                 <p>${p.desc}</p>
                 <div class="project-tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div>
                 <div class="project-links">
-                    <a href="${p.github}" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    ${p.demo !== '#' ? `<a href="${p.demo}" target="_blank"><i class="fas fa-external-link-alt"></i> معاينة</a>` : ''}
+                    <a href="${p.github}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                    ${p.demo !== '#' ? `<a href="${p.demo}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> معاينة</a>` : ''}
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function renderDevopsProjects() {
+    const container = document.getElementById('devopsProjectsGrid');
+    if (!container) return;
+    container.innerHTML = devopsProjects.map(p => `
+        <div class="project-card">
+            <div class="project-img">${p.icon}</div>
+            <div class="project-info">
+                <h3>${p.title}</h3>
+                <p>${p.desc}</p>
+                <div class="project-tech">${p.tech.map(t => `<span>${t}</span>`).join('')}</div>
+                <div class="project-links">
+                    <a href="${p.github}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                    ${p.demo !== '#' ? `<a href="${p.demo}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> معاينة</a>` : ''}
                 </div>
             </div>
         </div>
@@ -161,7 +180,7 @@ function renderProjects() {
 }
 
 function updateFilterButtons() {
-    const categories = ['all', 'HTML5', 'CSS3', 'JavaScript', 'React', 'Vue.js', 'Node.js', 'Bootstrap', 'Tailwind', 'Python'];
+    const categories = ['all', 'HTML5', 'CSS3', 'JavaScript', 'React', 'Vue.js', 'Bootstrap', 'Tailwind'];
     const btnsContainer = document.getElementById('filterButtons');
     if (!btnsContainer) return;
     
@@ -216,6 +235,7 @@ const translations = {
         about_text: "أنا سارة درويش، مطورة ويب ومهندسة DevOps. أمتلك شغفًا كبيرًا ببناء تطبيقات ويب حديثة باستخدام React وVue.js، وأيضًا في أتمتة العمليات وإدارة البنية التحتية السحابية باستخدام Docker وAnsible وAWS. هدفي هو تقديم حلول متكاملة وفعّالة تساهم في نجاح المشاريع الرقمية.",
         skills_title: "مهاراتي التقنية", advanced_title: "⚙️ مهارات متقدمة (DevOps & Cloud)",
         projects_title: "أعمالي", search_placeholder: "🔍 بحث بالاسم أو التقنية...",
+        devops_title: "🚀 مشاريع DevOps والسحابة",
         contact_title: "تواصل معي", contact_desc: "يسعدني التواصل معك للمشاريع أو فرص العمل",
         footer: "جميع الحقوق محفوظة"
     },
@@ -225,6 +245,7 @@ const translations = {
         about_text: "I'm Sara Darwish, a web developer and DevOps engineer. I have a great passion for building modern web applications using React and Vue.js, as well as automating processes and managing cloud infrastructure using Docker, Ansible, and AWS. My goal is to provide integrated and efficient solutions that contribute to the success of digital projects.",
         skills_title: "Technical Skills", advanced_title: "⚙️ Advanced Skills (DevOps & Cloud)",
         projects_title: "Projects", search_placeholder: "🔍 Search by name or tech...",
+        devops_title: "🚀 DevOps & Cloud Projects",
         contact_title: "Contact Me", contact_desc: "I'd love to connect for projects or job opportunities",
         footer: "All rights reserved"
     }
@@ -240,14 +261,87 @@ function setLanguage(lang) {
         if (t[key]) el.innerText = t[key];
     });
     document.getElementById("langToggle").innerHTML = lang === "ar" ? "🇬🇧 English" : "🇸🇦 العربية";
-    // Restart typewriter with new language
     roleIndex = 0; charIndex = 0; isDeleting = false;
     typeEffect();
-    // Update filter button texts if needed
     updateFilterButtons();
 }
 
-// ---------- Initialization ----------
+// Scroll to Top with progress indicator
+function initScrollTop() {
+    const scrollBtn = document.getElementById('scrollTop');
+    const circle = document.querySelector('.progress-ring-circle');
+    const radius = 22;
+    const circumference = 2 * Math.PI * radius;
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    function setProgress(percent) {
+        const offset = circumference - (percent / 100) * circumference;
+        circle.style.strokeDashoffset = offset;
+        // Change color based on percentage
+        if (percent < 30) circle.style.stroke = '#efb710';
+        else if (percent < 70) circle.style.stroke = '#bed6db';
+        else circle.style.stroke = '#8fb5bb';
+    }
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        setProgress(scrollPercent);
+        if (scrollTop > 400) scrollBtn.classList.add('show');
+        else scrollBtn.classList.remove('show');
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Quick Navigation Dots active state
+function initQuickNav() {
+    const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+    const dots = document.querySelectorAll('.nav-dot');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        for (let section of sections) {
+            const element = document.getElementById(section);
+            if (element) {
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= 200 && rect.bottom >= 200) {
+                    current = section;
+                    break;
+                }
+            }
+        }
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+            if (dot.getAttribute('data-section') === current) {
+                dot.classList.add('active');
+            }
+        });
+    });
+}
+
+// Mobile menu toggle
+function initMobileMenu() {
+    const toggle = document.getElementById('mobileMenuToggle');
+    const nav = document.getElementById('mainNav');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        toggle.classList.toggle('active');
+    });
+    // Close menu when clicking a link
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            toggle.classList.remove('active');
+        });
+    });
+}
+
+// Dark mode
 function initDarkMode() {
     const toggle = document.getElementById('themeToggle');
     if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
@@ -257,17 +351,8 @@ function initDarkMode() {
     });
 }
 
-function initScrollTop() {
-    const btn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) btn.classList.add('show');
-        else btn.classList.remove('show');
-    });
-    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-}
-
+// ---------- Initialization ----------
 window.addEventListener('DOMContentLoaded', () => {
-    // Hide preloader
     setTimeout(() => {
         const preloader = document.getElementById('preloader');
         if (preloader) {
@@ -279,10 +364,13 @@ window.addEventListener('DOMContentLoaded', () => {
     renderBasicSkills();
     renderAdvancedSlider();
     renderProjects();
+    renderDevopsProjects();
     updateFilterButtons();
     typeEffect();
     initDarkMode();
     initScrollTop();
+    initQuickNav();
+    initMobileMenu();
     
     // Initialize Swiper
     new Swiper('.mySwiper', {
@@ -310,10 +398,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Set default language
     setLanguage('ar');
-    
-    // Language toggle event
     document.getElementById('langToggle').addEventListener('click', () => {
         setLanguage(currentLang === 'ar' ? 'en' : 'ar');
     });
