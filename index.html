@@ -3,47 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>سارة درويش | مطورة ويب ومهندسة DevOps</title>
-    <meta name="description" content="بورتفوليو سارة درويش - مطورة ويب ومهندسة DevOps. أعرض مشاريعي في React, Vue.js, وأحدث تقنيات السحابة والأتمتة.">
-    <meta name="keywords" content="سارة درويش, Sara Darwish, بورتفوليو, مطورة ويب, DevOps, Docker, Cloud, AWS, Python, Linux, Ansible, React, Vue.js">
+    <title>سارة درويش | مطورة ويب ومهندسة برمجيات</title>
+    <meta name="description" content="سارة درويش: مطورة ويب ومهندسة برمجيات (Software Engineer). أقدم حلولاً رقمية شاملة وتطبيقات ويب حديثة.">
+    <meta name="keywords" content="سارة درويش, Sara Darwish, مطورة ويب, Software Engineer, DevOps, Frontend, بورتفوليو, أعمال حرة">
     <meta name="author" content="سارة درويش">
-    <!-- Open Graph / SEO -->
-    <meta property="og:title" content="سارة درويش | مطورة ويب ومهندسة DevOps">
-    <meta property="og:description" content="بورتفوليو سارة درويش - أعرض مشاريعي وخبراتي في تطوير الويب والبنية التحتية السحابية.">
+    <link rel="canonical" href="https://saradrwish.github.io/myportofolio2022march/">
+    <meta property="og:title" content="سارة درويش | مطورة ويب ومهندسة برمجيات">
+    <meta property="og:description" content="بورتفوليو سارة درويش - أعرض مشاريعي وخبراتي في تطوير الويب والبرمجيات.">
     <meta property="og:image" content="assets/img/profile.png">
     <meta property="og:url" content="https://saradrwish.github.io/myportofolio2022march/">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/code--v1.png">
-    <!-- External Styles & Fonts -->
+    <link rel="icon" type="image/png" href="assets/img/profile.png">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Language & Dark Mode Controls -->
     <div class="top-controls">
-        <button id="themeToggle" class="theme-btn" aria-label="تبديل الوضع المظلم">
-            <i class="fas fa-moon"></i>
+        <button id="themeToggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+        <button id="langToggle" class="lang-icon">
+            <span class="lang-ar">ع</span>
+            <span class="lang-en">EN</span>
         </button>
-        <button id="langToggle" class="lang-btn">🇬🇧 English</button>
     </div>
-
-    <!-- Preloader -->
     <div id="preloader"><div class="loader"></div></div>
-
-    <!-- Mobile Menu Toggle -->
-    <div class="mobile-menu-toggle" id="mobileMenuToggle">
-        <i class="fas fa-bars"></i>
-    </div>
+    <div class="mobile-menu-toggle" id="mobileMenuToggle"><i class="fas fa-bars"></i></div>
 
     <div class="container">
-        <!-- Header -->
         <header>
-            <div class="logo">
-                <h2>سارة <span>درويش</span></h2>
-            </div>
+            <div class="logo"><h2>سارة <span>درويش</span></h2></div>
             <nav id="mainNav">
                 <ul>
                     <li><a href="#home" data-key="nav_home">الرئيسية</a></li>
@@ -53,92 +42,117 @@
                     <li><a href="#contact" data-key="nav_contact">تواصل</a></li>
                 </ul>
             </nav>
+            <div class="empty-spacer"></div>
         </header>
 
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1><span data-key="hero_greeting">أنا</span> <span class="highlight">سارة درويش</span></h1>
+                <h1><span data-key="hero_greeting">أنا</span> <span class="highlight" id="heroName">سارة درويش</span></h1>
                 <div class="typewriter"><span id="typed-text"></span><span class="cursor">|</span></div>
-                <p data-key="hero_desc">مطورة ويب ومهندسة DevOps - أحول الأفكار إلى تطبيقات سحابية وتفاعلية عالية الأداء.</p>
+                <p data-key="hero_desc">مطورة ويب ومهندسة برمجيات - أحول الأفكار إلى تطبيقات سحابية وتفاعلية عالية الأداء.</p>
                 <div class="btn-group">
                     <a href="#projects" class="btn-primary" data-key="btn_work">استعرض أعمالي</a>
                     <a href="assets/docs/cv.pdf" class="btn-outline" download data-key="btn_cv">السيرة الذاتية</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/img/profile.png" alt="سارة درويش - مطورة ويب">
-            </div>
+            <div class="hero-image"><img src="assets/img/profile.png" alt="سارة درويش"></div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="about">
             <h2 class="section-title" data-key="about_title">من أنا</h2>
-            <div class="about-card">
-                <p data-key="about_text">أنا سارة درويش، مطورة ويب ومهندسة DevOps. أمتلك شغفًا كبيرًا ببناء تطبيقات ويب حديثة باستخدام React وVue.js، وأيضًا في أتمتة العمليات وإدارة البنية التحتية السحابية باستخدام Docker وAnsible وAWS. هدفي هو تقديم حلول متكاملة وفعّالة تساهم في نجاح المشاريع الرقمية.</p>
-            </div>
+            <div class="about-card"><p data-key="about_text">أنا سارة درويش، مطورة ويب ومهندسة برمجيات. أمتلك شغفاً كبيراً ببناء تطبيقات ويب وتطبيقات مخصصة حديثة باستخدام React وVue.js، وأتمتة العمليات وإدارة البنية التحتية السحابية عبر Docker وKubernetes وAnsible وAWS. أهدف لتقديم حلول متكاملة وعملية تساهم في نجاح مشاريعكم الرقمية.</p></div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Skills Section with Swipers -->
         <section id="skills" class="skills">
             <h2 class="section-title" data-key="skills_title">مهاراتي التقنية</h2>
-            <div class="skills-grid" id="skillsGrid"></div>
             
-            <h3 class="subtitle" data-key="advanced_title">⚙️ مهارات متقدمة (DevOps & Cloud)</h3>
-            <div class="swiper mySwiper">
+            <!-- Swiper 1: Languages -->
+            <div class="skill-swiper-container">
+                <h3 class="group-title" data-key="lang_group">لغات البرمجة</h3>
+                <div class="swiper skillSwiper" id="langSwiper">
+                    <div class="swiper-wrapper" id="languagesSwiper"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Swiper 2: Frameworks -->
+            <div class="skill-swiper-container">
+                <h3 class="group-title" data-key="frameworks_group">الأطر والمكتبات</h3>
+                <div class="swiper skillSwiper" id="frameworksSwiper">
+                    <div class="swiper-wrapper" id="frameworksSwiperWrapper"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Swiper 3: DevOps -->
+            <div class="skill-swiper-container">
+                <h3 class="group-title" data-key="devops_group">DevOps والبنية التحتية</h3>
+                <div class="swiper skillSwiper" id="devopsSwiper">
+                    <div class="swiper-wrapper" id="devopsSwiperWrapper"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Advanced Projects Slider -->
+            <h3 class="subtitle" data-key="advanced_title">مشاريع متقدمة</h3>
+            <div class="swiper advancedSwiper">
                 <div class="swiper-wrapper" id="advancedSkillsSlider"></div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
 
-            <!-- Modal for skill details -->
-            <div id="skillModal" class="modal">
-                <div class="modal-content">
-                    <span class="close-modal">&times;</span>
-                    <h3 id="modalSkillTitle"></h3>
-                    <p id="modalSkillDesc"></p>
-                    <div id="modalRelatedProject"></div>
-                </div>
-            </div>
+            <div id="skillModal" class="modal"><div class="modal-content"><span class="close-modal">&times;</span><h3 id="modalSkillTitle"></h3><p id="modalSkillDesc"></p><div id="modalRelatedProject"></div></div></div>
         </section>
 
-        <!-- Projects Section with Filter & Search -->
+        <!-- Projects Section -->
         <section id="projects" class="projects">
             <h2 class="section-title" data-key="projects_title">أعمالي</h2>
             <div class="filter-bar">
                 <div class="filter-buttons" id="filterButtons"></div>
-                <input type="text" id="searchInput" class="search-input" placeholder="🔍 بحث بالاسم أو التقنية..." data-key="search_placeholder">
+                <input type="text" id="searchInput" class="search-input" placeholder="بحث بالاسم أو التقنية..." data-key="search_placeholder">
             </div>
             <div class="projects-grid" id="projectsGrid"></div>
         </section>
 
+        <!-- Freelance Section -->
+        <section id="freelance-projects" class="projects">
+            <h2 class="section-title" data-key="freelance_title">أعمال حرة ومنصات</h2>
+            <div class="projects-grid" id="freelanceGrid"></div>
+        </section>
+
         <!-- DevOps Projects Section -->
         <section id="devops-projects" class="projects">
-            <h2 class="section-title" data-key="devops_title">🚀 مشاريع DevOps والسحابة</h2>
+            <h2 class="section-title" data-key="devops_title">مشاريع DevOps والسحابة</h2>
             <div class="projects-grid" id="devopsProjectsGrid"></div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <section id="contact" class="contact">
             <h2 class="section-title" data-key="contact_title">تواصل معي</h2>
             <div class="contact-card">
                 <p data-key="contact_desc">يسعدني التواصل معك للمشاريع أو فرص العمل</p>
                 <div class="social-links">
-                    <a href="https://github.com/SaraDrwish" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/sara-darwish" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:it.saradarwish@gmail.com" aria-label="البريد الإلكتروني"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/SaraDrwish" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/sara-darwish" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:it.saradarwish@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
                 </div>
                 <a href="assets/docs/cv.pdf" class="btn-cv" download><i class="fas fa-file-pdf"></i> <span data-key="btn_cv">السيرة الذاتية (PDF)</span></a>
             </div>
         </section>
 
-        <footer>
-            <p>© 2026 سارة درويش - <span data-key="footer">جميع الحقوق محفوظة</span></p>
-        </footer>
+        <footer><p>© 2026 سارة درويش - <span data-key="footer">جميع الحقوق محفوظة</span></p></footer>
     </div>
 
-    <!-- Scroll to Top Button with progress indicator -->
     <div id="scrollTop" class="scroll-top">
         <svg class="progress-ring" width="50" height="50">
             <circle class="progress-ring-circle-bg" cx="25" cy="25" r="22" fill="none" stroke="#e0e0e0" stroke-width="3"/>
@@ -147,16 +161,14 @@
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <!-- Quick Navigation Dots -->
     <div class="quick-nav" id="quickNav">
-        <a href="#home" class="nav-dot" data-section="home"><span>🏠</span></a>
-        <a href="#about" class="nav-dot" data-section="about"><span>👤</span></a>
-        <a href="#skills" class="nav-dot" data-section="skills"><span>🧠</span></a>
-        <a href="#projects" class="nav-dot" data-section="projects"><span>📁</span></a>
-        <a href="#contact" class="nav-dot" data-section="contact"><span>📧</span></a>
+        <a href="#home" class="nav-dot" data-section="home"><i class="fas fa-home"></i></a>
+        <a href="#about" class="nav-dot" data-section="about"><i class="fas fa-user"></i></a>
+        <a href="#skills" class="nav-dot" data-section="skills"><i class="fas fa-code"></i></a>
+        <a href="#projects" class="nav-dot" data-section="projects"><i class="fas fa-folder-open"></i></a>
+        <a href="#contact" class="nav-dot" data-section="contact"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
