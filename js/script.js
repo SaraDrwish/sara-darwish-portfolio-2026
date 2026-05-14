@@ -311,10 +311,10 @@ function typeEffect() {
     setTimeout(typeEffect, isDeleting ? 80 : 120);
 }
 
-const translations = {
+const translations = { 
     ar: {
         nav_home: "الرئيسية", nav_about: "من أنا", nav_skills: "مهاراتي", nav_projects: "أعمالي", nav_contact: "تواصل",
-        hero_greeting: "أنا", btn_work: "استعرض أعمالي", btn_cv: "السيرة الذاتية", about_title: "من أنا",
+        hero_greeting: "أنا", btn_work: "استعرض أعمالي", btn_cv_frontend: " Frontend السيرة الذاتية",btn_cv_devops: "السيرة الذاتية Devops ", about_title: "من أنا",
         about_text: "أنا سارة درويش، مطورة ويب ومهندسة برمجيات. أمتلك شغفاً كبيراً ببناء تطبيقات ويب حديثة باستخدام React، Next.js و Vue.js، وأتمتة العمليات وإدارة البنية التحتية السحابية عبر Docker وKubernetes وAnsible وAWS.",
         skills_title: "مهاراتي التقنية", advanced_title: "مشاريع متقدمة",
         projects_title: "أعمالي", search_placeholder: "بحث بالاسم أو التقنية...",
@@ -328,7 +328,7 @@ const translations = {
     },
     en: {
         nav_home: "Home", nav_about: "About", nav_skills: "Skills", nav_projects: "Projects", nav_contact: "Contact",
-        hero_greeting: "I'm", btn_work: "View my work", btn_cv: "Resume", about_title: "About Me",
+        hero_greeting: "I'm", btn_work: "View my work", btn_cv_frontend: "Frontend Resume",btn_cv_devops: "Devops Resume", about_title: "About Me",
         about_text: "I'm Sara Darwish, a Web Developer and Software Engineer. I have a great passion for building modern web applications using React, Next.js and Vue.js, as well as automating processes and managing cloud infrastructure with Docker, Kubernetes, Ansible, and AWS.",
         skills_title: "Technical Skills", advanced_title: "Advanced Projects",
         projects_title: "Projects", search_placeholder: "Search by name or tech...",
