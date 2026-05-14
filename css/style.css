@@ -476,8 +476,8 @@ nav ul li a:hover::after { width: 100%; }
 }
 .skillSwiper .swiper-slide:hover, .skillSwiperNoAutoplay .swiper-slide:hover, .advancedSwiperNoAutoplay .swiper-slide:hover {
     transform: translateY(-8px);
+    color: var(--gray-dark) !important;
     background:linear-gradient(315deg, #bed6db , #BCB199 , #7E6A56) ;
-    color:   linear-gradient(315deg, #2a2b32 , #efb710)  !important;
 }
 .skillSwiper .swiper-slide i, .skillSwiperNoAutoplay .swiper-slide i, .advancedSwiperNoAutoplay .swiper-slide i {
     font-size: 2.8rem;
@@ -490,7 +490,9 @@ nav ul li a:hover::after { width: 100%; }
 }
 .skillSwiper .swiper-slide:hover i, .skillSwiperNoAutoplay .swiper-slide:hover i, .advancedSwiperNoAutoplay .swiper-slide:hover i {
     background: none;
-    color: #2a2b32;
+    color: var(--gray-dark) !important;
+    fill:  var(--gray-dark); 
+    /* color: linear-gradient(#5f606d , #BCB199 ) ; */
 }
 .skillSwiper .progress-bar, .skillSwiperNoAutoplay .progress-bar {
     background: #ddd;
