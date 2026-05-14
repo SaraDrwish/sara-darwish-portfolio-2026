@@ -322,6 +322,7 @@ const translations = {
         freelance_title: "أعمال حرة ومنصات", devops_title: "مشاريع DevOps والسحابة",
         contact_title: "تواصل معي", contact_desc: "يسعدني التواصل معك للمشاريع أو فرص العمل",
         footer: "جميع الحقوق محفوظة",
+        hero_desc: "مطورة ويب ومهندسة برمجيات - أحول الأفكار إلى تطبيقات سحابية وتفاعلية عالية الأداء." ,
         lang_group: "لغات البرمجة", frameworks_group: "الأطر والمكتبات", devops_group: "DevOps والبنية التحتية",
         exp_years: "+3", exp_years_label: "سنوات خبرة", exp_projects: "+25", exp_projects_label: "مشروع منفذ", exp_clients: "+2", exp_clients_label: "عملاء"
     },
@@ -335,6 +336,7 @@ const translations = {
         freelance_title: "Freelance & Platforms", devops_title: "DevOps & Cloud Projects",
         contact_title: "Contact Me", contact_desc: "I'd love to connect for projects or job opportunities",
         footer: "All rights reserved",
+        hero_desc: "Web developer and software engineer - I turn ideas into high-performance cloud and interactive applications." ,
         lang_group: "Programming Languages", frameworks_group: "Frameworks & Libraries", devops_group: "DevOps & Infrastructure",
         exp_years: "+3", exp_years_label: "Years Experience", exp_projects: "+25", exp_projects_label: "Projects Completed", exp_clients: "+2", exp_clients_label: "Clients"
     }
