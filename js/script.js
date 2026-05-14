@@ -15,8 +15,6 @@ const frameworksSkills = [
     { name: "Vue.js", icon: "fab fa-vuejs", percent: 82 },
     { name: "jQuery", icon: "fab fa-js", percent: 80 },
     { name: "Express.js", icon: "fab fa-node-js", percent: 75 },
-    { name: "Laravel", icon: "fab fa-laravel", percent: 70 },
-    { name: "Flask", icon: "fas fa-flask", percent: 70 },
     { name: "Bootstrap", icon: "fab fa-bootstrap", percent: 88 },
     { name: "Tailwind CSS", icon: "fab fa-css3-alt", percent: 82 }
 ];
@@ -37,15 +35,15 @@ const advancedSkills = [
 ];
 
 const sallaZidProjects = [
-    { id: 1, title_en: "Salla E-commerce Store", title_ar: "متجر سلة إلكتروني", desc_en: "Complete e-commerce store on Salla platform with professional design and features.", desc_ar: "متجر إلكتروني متكامل على منصة سلة مع تصميم احترافي وميزات متقدمة.", tech: ["Salla", "E-commerce", "API"], icon: "fas fa-store", github: "#", demo: "https://sotionsa.com/ar/cart", image: "https://asas-tools.com/u/uploads/sara_craffo/sallah-logo.png" },
-    { id: 2, title_en: "Zid E-commerce Store", title_ar: "متجر زِد إلكتروني", desc_en: "Complete e-commerce store on Zid platform with modern design.", desc_ar: "متجر إلكتروني متكامل على منصة زِد مع تصميم عصري.", tech: ["Zid", "E-commerce", "API"], icon: "fas fa-shopping-bag", github: "#", demo: "#", image: "https://asas-tools.com/u/uploads/sara_craffo/zid-logo.png" },
-    { id: 3, title_en: "Craffo Information Technology", title_ar: "كرافو لتقنية المعلومات", desc_en: "Technology solutions provider with focus on quality and innovation.", desc_ar: "مزود حلول تقنية يركز على الجودة والابتكار.", tech: ["React", "Node.js", "API"], icon: "fas fa-microchip", github: "#", demo: "#" }
+    { id: 1, title_en: "Salla Store", title_ar: "متجر سلة ", desc_en: " a store on Salla  with professional design ", desc_ar: "متجر على منصة سلة مع تصميم احترافي.", tech: ["Salla"], icon: "fas fa-store", demo: "https://sotionsa.com/ar/", image: "https://asas-tools.com/u/uploads/sara_craffo/sallah-logo.png" },
+    { id: 2, title_en: "Zid Store", title_ar: "تصميم متجر على زد ", desc_en: "design a Zid Store.", desc_ar: "تصميم متجر على منصة زِد    .", tech: ["Zid"], icon: "fas fa-shopping-bag",  demo: "https://nuvaya-sa.com/", image: "https://asas-tools.com/u/uploads/sara_craffo/zid-logo.png" },
+    // { id: 3, title_en: "Craffo Information Technology", title_ar: "كرافو لتقنية المعلومات", desc_en: "Technology solutions provider with focus on quality and innovation.", desc_ar: "مزود حلول تقنية يركز على الجودة والابتكار.", tech: ["React", "Node.js", "API"], icon: "fas fa-microchip", github: "#", demo: "#" }
 ];
 
 const projectsData = [
-    { id: 4, title_en: "Nuvaya", title_ar: "نوفايا (Nuvaya)", desc_en: "Complete company website with various services and professional design.", desc_ar: "موقع شركة متكامل بخدمات متنوعة وتصميم احترافي.", tech: ["React", "Next.js", "Tailwind"], icon: "fas fa-building", github: "https://github.com/SaraDrwish/nuvaya", demo: "https://nuvaya-sa.com/" },
-    { id: 5, title_en: "Woodlife", title_ar: "وود لايف (Woodlife)", desc_en: "Specialized website for luxury wooden furniture.", desc_ar: "موقع متخصص في الأثاث الخشبي الفاخر.", tech: ["Vue.js", "Tailwind", "Responsive"], icon: "fas fa-tree", github: "https://github.com/SaraDrwish/woodlife", demo: "https://woodlife.sa/" },
-    { id: 6, title_en: "The Velours", title_ar: "ذا فيلفور (The Velours)", desc_en: "Premium brand website for care products (HTML/CSS/JS - not React).", desc_ar: "موقع علامة تجارية راقية لمنتجات العناية (HTML/CSS/JS - ليس React).", tech: ["HTML5", "CSS3", "JavaScript", "Responsive"], icon: "fas fa-crown", github: "https://github.com/SaraDrwish/thevelours", demo: "https://thevelours.com/ar" },
+    { id: 4, title_en: "Nuvaya", title_ar: "نوفايا (Nuvaya)", desc_en: " professional design.", desc_ar: "تصميم احترافي.", tech: ["Zid"] , icon: "fas fa-building" , demo: "https://nuvaya-sa.com/" },
+    { id: 5, title_en: "Woodlife", title_ar: "وود لايف (Woodlife)", desc_en: "Specialized website for luxury wooden furniture.", desc_ar: "موقع متخصص في الأثاث الخشبي الفاخر.", tech: ["Sallah"], icon: "fas fa-tree", demo: "https://woodlife.sa/" },
+    { id: 6, title_en: "The Velours", title_ar: "ذا فيلفور (The Velours)", desc_en: " professional design.", desc_ar: "تصميم احترافي.", tech: ["Sallah"] , icon: "fas fa-crown", demo: "https://thevelours.com/ar" },
     { id: 7, title_en: "Depi Ultimate Pipeline", title_ar: "Depi Ultimate Pipeline", desc_en: "Complete pipeline using Kubernetes, Ansible, Jenkins, Terraform, deployed on AWS.", desc_ar: "خط أنابيب متكامل باستخدام Kubernetes, Ansible, Jenkins, Terraform ونشره على AWS.", tech: ["Kubernetes", "Ansible", "Jenkins", "Terraform", "AWS"], icon: "fas fa-rocket", github: "https://github.com/Ahmad-AbdElrahman/Depi-ultimate-pipeline", demo: "https://github.com/Ahmad-AbdElrahman/Depi-ultimate-pipeline" },
     { id: 8, title_en: "React Portfolio", title_ar: "بورتفوليو React", desc_en: "Personal portfolio built with React and Framer Motion animations.", desc_ar: "بورتفوليو شخصي مبني على React مع تأثيرات حركية باستخدام Framer Motion.", tech: ["React", "Framer Motion", "CSS3"], icon: "fas fa-layer-group", github: "https://github.com/SaraDrwish/react3Porto", demo: "#" },
     { id: 9, title_en: "Vue.js Landing Page", title_ar: "صفحة هبوط Vue.js", desc_en: "Interactive landing page using Vue.js and Tailwind CSS.", desc_ar: "صفحة هبوط تفاعلية باستخدام Vue.js و Tailwind CSS.", tech: ["Vue.js", "Tailwind", "Figma"], icon: "fab fa-vuejs", github: "https://github.com/SaraDrwish/sara-s-task1-1-vueJs", demo: "#" },
